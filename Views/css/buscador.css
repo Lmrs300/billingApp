@@ -1,0 +1,105 @@
+.f_buscador {
+  max-width: 100%;
+  width: 40%;
+  display: block;
+  position: absolute;
+  right: 0px;
+  user-select: none;
+}
+
+.buscador {
+  display: inline-block;
+  width: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-left: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 0px 5px 5px 0px;
+  letter-spacing: 1px;
+  font-size: 1em;
+  margin-left: -5px;
+}
+
+.buscar {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  background-color: rgb(0, 119, 230);
+  border-radius: 5px 0px 0px 5px;
+  padding: 5px 5px 0px 5px;
+  top: 7px;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buscar img {
+  width: 25px;
+}
+
+.buscar:hover {
+  background-color: rgb(0, 119, 180);
+}
+
+.buscar:active {
+  transform: translateY(2px);
+}
+
+.content-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.content-select select::-ms-expand {
+  display: none;
+}
+
+.content-select {
+  max-width: 150px;
+  position: relative;
+  display: inline-block;
+}
+
+.content-select select {
+  display: inline-block;
+  width: calc(100% + 25px);
+  cursor: pointer;
+  padding: 0px 3px;
+  height: 32px;
+  outline: 0;
+  font-size: 1em;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.content-select select:hover {
+  background: #f0f0f0;
+}
+
+/* 
+Creamos la flecha que aparece a la izquierda del select.
+Realmente este elemento es un cuadrado que sólo tiene
+dos bordes con color y que giramos con transform: rotate(-45deg);
+*/
+.content-select i {
+  position: absolute;
+  right: -15px;
+  top: calc(50% - 13px);
+  width: 16px;
+  height: 16px;
+  display: block;
+  border-left: 4px solid rgb(0, 119, 230);
+  border-bottom: 4px solid rgb(0, 119, 230);
+  transform: rotate(-45deg); /* Giramos el cuadrado */
+  transition: all 0.25s ease;
+}
+
+.content-select:hover i {
+  margin-top: 3px;
+}

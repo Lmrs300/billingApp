@@ -1,0 +1,163 @@
+.notifications {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%);
+  user-select: none;
+  z-index: 9999999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.toast {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  position: relative;
+  overflow: auto;
+  padding: 10px;
+  margin-bottom: 10px;
+  min-width: 400px;
+  width: fit-content;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 70px 1fr 70px;
+  border: none;
+  border-radius: 5px;
+  --color: #0abf30;
+  background-color: var(--bg_color);
+  --posi: 30px;
+  animation: show_toast 0.3s ease forwards;
+}
+
+.toast.active {
+  animation: hide_toast 0.3s ease forwards;
+}
+
+.toast .dec_bar {
+  top: 0;
+  width: 100%;
+  height: 7px;
+  background-color: var(--color);
+}
+
+.toast .title {
+  font-size: x-large;
+  font-weight: bold;
+  text-align: start !important;
+}
+.toast i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+  transition: all 0.3s ease;
+}
+
+.toast i img {
+  width: 60px;
+  height: 60px;
+}
+
+.toast .xmark {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.toast .xmark:hover {
+  scale: 1.1;
+}
+
+.toast .xmark:active {
+  scale: 0.97;
+}
+
+.toast span,
+.toast .close {
+  opacity: 0.8;
+  font-size: 1.1em;
+}
+
+.toast .content {
+  max-width: 500px;
+  width: fit-content;
+  word-wrap: break-word;
+  text-align: start !important;
+}
+
+@keyframes hide_toast {
+  /* 0% {
+    transform: translateY(calc(-50% + var(--posi)));
+  }
+  40% {
+    transform: translateY(calc(-60% + var(--posi)));
+  }
+  80% {
+    transform: translateY(calc(-30% + var(--posi)));
+  }
+  100% {
+    transform: translateY(calc(-100% + var(--posi)));
+  } */
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes show_toast {
+  /* 0% {
+    transform: translateY(calc(-100% + var(--posi)));
+  }
+  40% {
+    transform: translateY(calc(-30% + var(--posi)));
+  }
+  80% {
+    transform: translateY(calc(-60% + var(--posi)));
+  }
+  100% {
+    transform: translateY(calc(-50% + var(--posi)));
+  } */
+
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.toast .progress_bar {
+  --time_animation: 5s;
+}
+.toast .progress_bar.active {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color);
+  box-shadow: 0 0 10px var(--color);
+  content: "";
+  width: 100%;
+  height: 3px;
+  animation: timeOut var(--time_animation) linear 1 forwards;
+}
+@keyframes timeOut {
+  to {
+    width: 0%;
+  }
+}
+/* error */
+.toast.error {
+  --color: #f24d4c;
+}
+/* warning */
+.toast.warning {
+  --color: #e9bd0c;
+}
+/* info */
+.toast.info {
+  --color: #3498db;
+}

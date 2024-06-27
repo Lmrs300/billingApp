@@ -1,0 +1,378 @@
+body {
+  min-width: 900px;
+  position: relative;
+}
+
+.titulo {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.3em;
+  user-select: none;
+}
+
+#pag_fec {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: -15px;
+}
+
+#fecha_inc {
+  border-radius: 5px;
+  border: 1px solid black;
+  outline: none;
+  padding: 3px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+#envio_fec {
+  font-size: 1em;
+  font-weight: bold;
+  padding: 5px;
+  border: 0px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: blue;
+  color: white;
+  transition: all 0.3 ease;
+}
+
+#envio_fec:hover {
+  background: rgb(1, 1, 180);
+}
+
+.agregar {
+  display: block;
+  text-align: center;
+}
+
+.agregar button {
+  margin-top: 20px;
+  padding: 5px 20px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #00cc00;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.agregar button:hover {
+  background: rgb(50, 182, 0);
+}
+
+.tipificacion {
+  display: block;
+  text-align: center;
+}
+
+.tipificacion button {
+  margin-top: 3px;
+  padding: 5px 5px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #ff5e00;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.8em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.tipificacion button:hover {
+  background: #eb5600;
+}
+
+.volver {
+  display: block;
+  text-align: center;
+  user-select: none;
+}
+
+.volver button {
+  margin-top: 3px;
+  padding: 5px 5px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #ff5e00;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.8em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+.volver button:hover {
+  background: #eb5600;
+}
+
+.scroll_inc {
+  max-height: 550px;
+  overflow-y: auto;
+  width: 95%;
+  margin: 20px auto;
+  margin-bottom: 45px;
+}
+
+table {
+  width: 95%;
+  border-collapse: collapse;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  margin: 20px auto;
+  border-radius: 4px;
+  overflow: hidden;
+  font-size: 1em;
+}
+
+.thead_ver th {
+  border-top: 1px solid #c7c7c7;
+  border-bottom: 1px solid #c7c7c7;
+}
+
+table thead th {
+  padding: 5px 0px;
+  background: blue;
+  border-right: 1px solid #c7c7c7;
+  color: #fff;
+  font-size: 1.05em;
+  user-select: none;
+}
+
+table thead th:last-of-type {
+  border-right: none;
+}
+
+table tbody tr {
+  background-color: white;
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3d5;
+}
+
+table tbody tr td {
+  padding: 5px 5px;
+  border-right: 1px solid #c7c7c7;
+  overflow: auto;
+}
+
+table tbody tr td:last-of-type {
+  border-right: none;
+}
+
+.editar {
+  background: rgb(255, 172, 0);
+  border: none;
+  outline: none;
+  padding: 5px 5px 0px 5px;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.editar:hover {
+  background: rgb(255, 142, 0);
+}
+
+.editar img {
+  width: 25px;
+  height: 25px;
+}
+
+.eliminar {
+  background: rgb(255, 0, 0);
+  border: none;
+  outline: none;
+  padding: 5px 5px 0px 5px;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.eliminar:hover {
+  background-color: rgb(197, 1, 1);
+}
+
+.eliminar img {
+  width: 25px;
+  height: 25px;
+}
+
+.reporte button {
+  background: black;
+  border: none;
+  outline: none;
+  padding: 5px 5px 0px 5px;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.reporte button:hover {
+  background: rgb(20, 20, 20);
+}
+
+.reporte button img {
+  width: 25px;
+  height: 25px;
+}
+
+.agreg_elim_prod {
+  border: none;
+  outline: none;
+  padding: 5px;
+  margin: 5px;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: #03a9f4;
+  position: relative;
+  bottom: 6px;
+}
+
+.agreg_elim_prod:hover {
+  background: #0088c7;
+}
+
+.ver_prod {
+  background: rgb(3, 169, 244);
+
+  border: none;
+  outline: none;
+  padding: 5px 5px 0px 5px;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.ver_prod:hover {
+  background: rgb(0, 136, 199);
+}
+
+.ver_prod img {
+  width: 25px;
+  height: 25px;
+}
+
+.cont-exito {
+  max-width: 95%;
+  text-align: center;
+  display: none;
+  margin: auto;
+}
+
+.exito {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  padding: 3px;
+  font-size: 1em;
+  background: rgba(0, 255, 0, 0.5);
+  border: 2px solid rgb(0, 255, 0);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+
+.exito p {
+  padding: 3px;
+}
+
+.cont-error {
+  max-width: 95%;
+  text-align: center;
+  display: none;
+  margin: auto;
+}
+
+.error {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  padding: 3px;
+  font-size: 1em;
+  background: rgba(255, 0, 0, 0.5);
+  border: 2px solid rgb(197, 1, 1);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+
+.error p {
+  padding: 3px;
+}
+
+.cont-pag {
+  display: block;
+  text-align: center;
+}
+
+.paginacion {
+  display: inline-block;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.paginacion a {
+  display: inline-block;
+  border-right: 2px solid black;
+}
+
+.paginacion a:last-of-type {
+  border-right: none;
+}
+
+.paginacion a button {
+  display: inline-block;
+  background-color: white;
+  padding: 5px;
+
+  border: none;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.paginacion a button:hover {
+  background-color: grey;
+}
+
+.pag-selected {
+  background-color: #0088c7 !important;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.pag-selected:hover {
+  background-color: #016897 !important;
+}

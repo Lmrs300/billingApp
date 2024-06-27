@@ -1,0 +1,21 @@
+h1,
+h2,
+.logo_principal {
+  display: flex;
+  justify-content: center;
+  user-select: none;
+}
+
+.logo {
+  width: 350px;
+  user-select: none;
+  background-color: rgb(198, 198, 198);
+  border: 5px solid rgb(173, 173, 173);
+  padding: 10px 20px 20px 20px;
+  margin-block: 10px 20px;
+  border-radius: 50%;
+}
+
+h1 {
+  margin-top: 50px;
+}

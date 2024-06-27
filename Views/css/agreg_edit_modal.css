@@ -1,0 +1,288 @@
+.modal-fade-form {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(144, 148, 150, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  backdrop-filter: blur(5px);
+}
+
+.modal-contenedor-form {
+  width: 80%;
+  min-width: 600px;
+  max-height: 98vh;
+  background-color: #fff;
+  border-radius: 5px;
+  user-select: none;
+  overflow: auto;
+  box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.3);
+}
+
+.modal-contenedor-form header {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  margin: auto;
+  font-size: 2em;
+  font-weight: bold;
+  padding: 10px;
+  background: #00cc00;
+  border-radius: 5px 5px 0px 0px;
+  user-select: none;
+  color: white;
+}
+
+.modal-contenedor-form .header_edit {
+  background-color: rgb(255, 220, 0);
+}
+
+.btn-cerrar {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-cerrar img {
+  width: 40px;
+  height: 40px;
+}
+
+.btn-cerrar:hover {
+  scale: 1.2;
+}
+
+.btn-cerrar:active {
+  scale: 0.97;
+}
+
+.modal-contenedor-form .form-modal {
+  overflow: auto;
+  padding-bottom: 5px;
+}
+
+.modal-contenedor-form .form-modal .div_form_grid {
+  text-align: center;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  row-gap: 30px;
+}
+
+.modal-contenedor-form .form-modal input[type="text"],
+.modal-contenedor-form .form-modal input[type="number"],
+.modal-contenedor-form .form-modal input[type="password"],
+.modal-contenedor-form .form-modal input[type="date"],
+.modal-contenedor-form .form-modal input[type="datetime-local"],
+.modal-contenedor-form .form-modal textarea {
+  outline: none;
+  border: none;
+  background: lightgray;
+  border-radius: 5px;
+  width: 80%;
+  padding: 10px;
+  font-size: 1em;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.modal-contenedor-form .form-modal input[type="date"],
+.modal-contenedor-form .form-modal input[type="datetime-local"] {
+  font-size: 0.9em;
+}
+
+.modal-contenedor-form .form-modal span {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.modal-contenedor-form .form-modal .form_field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#file_foto_usu {
+  display: none;
+  position: absolute;
+}
+
+#label_foto {
+  max-width: 70%;
+  width: 140px;
+  height: 100px;
+  margin-top: 10px;
+  overflow: hidden;
+
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#label_foto:hover {
+  scale: 1.1;
+}
+
+#foto_usu {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid black;
+}
+
+.modal-contenedor-form .btn-cerrar-form {
+  margin-top: 15px;
+  display: inline-block;
+  padding: 7px 10px;
+  background-color: #5488a3;
+  color: #fff;
+  font-size: 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3 ease;
+  margin-right: 40%;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.modal-contenedor-form .btn-cerrar-form:hover {
+  background-color: #185e83;
+}
+
+.submit_btn {
+  display: block;
+  text-align: center;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+#btn_agregar,
+#btn-agregar {
+  border: 0;
+  padding: 7px 10px;
+  background: rgb(50, 182, 0);
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+#btn_agregar:hover,
+#btn-agregar:hover {
+  background-color: rgb(40, 160, 0);
+}
+
+#btn_agregar:active,
+#btn-agregar:active {
+  scale: 0.97;
+}
+
+#btn_agregar:disabled,
+#btn-agregar:disabled {
+  background-color: rgb(23, 94, 0);
+  scale: 1;
+  cursor: default;
+}
+
+.btn-edit {
+  border: 0;
+  padding: 7px 10px;
+  background: rgb(255, 220, 0);
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  font-size: 1.2em;
+  position: relative;
+}
+
+.btn-edit:hover {
+  background-color: rgb(233, 185, 0);
+}
+
+.btn-edit:active {
+  scale: 0.97;
+}
+
+.btn-edit:disabled {
+  background-color: rgb(184, 138, 0);
+  scale: 1;
+  cursor: default;
+}
+
+.content-select select::-ms-expand {
+  display: none;
+}
+
+.content-select {
+  max-width: 200px;
+  position: relative;
+  margin-right: 30px;
+}
+
+.content-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: inline-block;
+  width: calc(100% + 25px);
+  cursor: pointer;
+  padding: 5px 35px 5px 5px;
+  min-height: 32px;
+  outline: 0;
+  font-size: 1em;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.content-select select:hover {
+  background: #f0f0f0;
+}
+
+.content-select i {
+  position: absolute;
+  right: -15px;
+  top: calc(20%);
+  width: 16px;
+  height: 16px;
+  display: block;
+  border-left: 4px solid rgb(0, 119, 230);
+  border-bottom: 4px solid rgb(0, 119, 230);
+  transform: rotate(-45deg);
+  /* Giramos el cuadrado */
+  transition: all 0.25s ease;
+}
+
+.content-select:hover i {
+  margin-top: 3px;
+}
+
+@media screen and (max-width: 800px) {
+  .modal-contenedor-form {
+    width: 90%;
+  }
+}

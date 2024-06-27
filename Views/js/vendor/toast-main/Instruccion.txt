@@ -1,0 +1,2 @@
+Cada vez que se cambie de lugar la carpeta de esta libreria, hay que cambiar
+tambien la ruta en el toast-main.js para que se vean bien las imagenes.

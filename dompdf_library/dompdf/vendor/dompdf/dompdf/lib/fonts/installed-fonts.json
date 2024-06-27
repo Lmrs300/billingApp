@@ -1,0 +1,11 @@
+{
+    "nunito": {
+        "italic": "D:\\xampp\\htdocs\\BillingApp\\dompdf_library\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/nunito_italic_c723218ddeb7f87a083d9429d5586841",
+        "500_italic": "D:\\xampp\\htdocs\\BillingApp\\dompdf_library\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/nunito_500_italic_466193ef8a023e19163107af9e3b7f18",
+        "bold_italic": "D:\\xampp\\htdocs\\BillingApp\\dompdf_library\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/nunito_bold_italic_4ce474138c89aefe1691f2bed545ffba",
+        "300": "D:\\xampp\\htdocs\\BillingApp\\dompdf_library\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/nunito_300_ed16c859231e9de60529ee8e2539295f",
+        "normal": "D:\\xampp\\htdocs\\BillingApp\\dompdf_library\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/nunito_normal_ee99570c2d40db4ca7cb27ecfa07bd0e",
+        "500": "D:\\xampp\\htdocs\\BillingApp\\dompdf_library\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/nunito_500_1337283c03afe8faf9193502488bd31d",
+        "bold": "nunito_bold_8878d120ae1cf02db589138e103b16c4"
+    }
+}
