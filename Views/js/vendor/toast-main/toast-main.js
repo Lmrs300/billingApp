@@ -1,4 +1,4 @@
-let lib_url = "http://localhost/Actividades_911/Views/js/vendor/toast-main"
+let lib_url = "http://localhost/billingApp/Views/js/vendor/toast-main"
 
 
 
