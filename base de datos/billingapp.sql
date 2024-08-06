@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-06-2024 a las 07:11:37
+-- Tiempo de generación: 28-06-2024 a las 05:12:56
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -41,8 +41,8 @@ CREATE TABLE `cant_prod_ven` (
 
 INSERT INTO `cant_prod_ven` (`id_cant_prod_ven`, `prod_ven`, `prod_prec_unid`, `cant_ven`, `id_fac`) VALUES
 (10, 'paracetamol', 19.99, 5, 4),
-(11, 'Acetaminofen', 14.5, 5, 4),
-(30, 'paracetamol', 19.99, 2, 1);
+(30, 'paracetamol', 19.99, 2, 1),
+(47, 'Acetaminofen', 14.5, 5, 4);
 
 -- --------------------------------------------------------
 
@@ -93,7 +93,7 @@ CREATE TABLE `facturas` (
 
 INSERT INTO `facturas` (`id_fac`, `serial_fac`, `fec_fac`, `nom_cli`, `ced_rif_cli`, `tel_cli`, `dir_cli`, `nom_usu`, `met_pago`, `monto_fac`, `iva_fac`, `total_fac`) VALUES
 (1, '4534dwwsa22', '2024-05-30 09:24:48', 'Manolo', '234875434', '09876467823', 'José Gregorio', 'Luis', 'Efectivo', 39.98, 16, 46.38),
-(4, '342d2evfrve443', '2024-05-31 02:05:00', 'Pepe', '4452343454', '45452324554', 'Los Teques', 'Paco', 'Tarj. débito', 172.45, 16, 200.04);
+(4, '342d2evfrve443', '2024-05-31 02:05:00', 'Pepe', '4452343454', '45452324554', 'Los Teques', 'Paco', 'Divisa', 172.45, 16, 205.22);
 
 -- --------------------------------------------------------
 
@@ -183,7 +183,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `cant_prod_ven`
 --
 ALTER TABLE `cant_prod_ven`
-  MODIFY `id_cant_prod_ven` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id_cant_prod_ven` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT de la tabla `clientes`
@@ -195,7 +195,7 @@ ALTER TABLE `clientes`
 -- AUTO_INCREMENT de la tabla `facturas`
 --
 ALTER TABLE `facturas`
-  MODIFY `id_fac` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_fac` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
