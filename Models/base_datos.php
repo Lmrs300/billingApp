@@ -8,10 +8,6 @@ $principal_fold = $path_parts[1];
 // Obtener el protocolo
 $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
 
-echo $_SERVER['REQUEST_URI'] . "<br>";
-
-echo $_SERVER["DOCUMENT_ROOT"];
-
 // Obtener el host
 $host = $_SERVER['HTTP_HOST'];
 

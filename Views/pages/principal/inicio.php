@@ -4,6 +4,9 @@ session_start();
 if (!isset($_SESSION['id'])) {
     //para que si la sesion no esta iniciada te saque al login.
     header('location: ../../../index.php');
+    echo $_SERVER['REQUEST_URI'] . "<br>";
+
+    echo $_SERVER["DOCUMENT_ROOT"];
 }
 
 ?>
