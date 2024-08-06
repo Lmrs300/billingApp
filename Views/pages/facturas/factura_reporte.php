@@ -33,7 +33,7 @@ $fecha[1] = substr($fecha[1], 0, -3)
     <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <title>Reporte de factura</title>
-    <link rel="stylesheet" href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/BillingApp/Views/css/reportes.css">
+    <link rel="stylesheet" href="../../css/reportes.css">
 
     <style>
         #div_firmas {
