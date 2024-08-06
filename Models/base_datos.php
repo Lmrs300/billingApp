@@ -5,14 +5,14 @@
 $path_parts = explode('/', $_SERVER['REQUEST_URI']);
 $principal_fold = $path_parts[1];
 
-// Obtener el protocolo
-$protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+// // Obtener el protocolo
+// $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
 
-// Obtener el host
-$host = $_SERVER['HTTP_HOST'];
+// // Obtener el host
+// $host = $_SERVER['HTTP_HOST'];
 
 // URL principal 
-$princ_url = $protocol . $host . '/' . $principal_fold;
+$princ_url = $_SERVER["DOCUMENT_ROOT"] . '/' . $principal_fold;
 
 if (file_exists($princ_url . '/Models/db_var.env')) {
     $dotenv = file_get_contents($princ_url . '/Models/db_var.env');
