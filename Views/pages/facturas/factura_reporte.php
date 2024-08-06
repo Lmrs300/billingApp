@@ -7,6 +7,25 @@ if (!isset($_SESSION['id'])) {
     header('location: ../../../index.php');
 }
 
+// Obtener la carpeta principal
+$path_parts = explode('/', $_SERVER['REQUEST_URI']);
+$principal_fold = $path_parts[1];
+
+// Obtener el protocolo
+$protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+
+// Obtener el host
+$host = $_SERVER['HTTP_HOST'];
+
+
+// URL principal 
+if ($host == "localhost") {
+    $princ_url = $protocol . $host . '/' . $principal_fold;
+} else {
+    $princ_url = $protocol . $host;
+}
+
+
 require("../../../Controllers/factura_controller.php");
 $datos = new Factura_controller();
 $factura = $datos->ver($_GET["id_fac"]);
@@ -33,7 +52,7 @@ $fecha[1] = substr($fecha[1], 0, -3)
     <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <title>Reporte de factura</title>
-    <link rel="stylesheet" href="../../css/reportes.css">
+    <link rel="stylesheet" href="<?php echo $princ_url; ?>/Views/css/reportes.css">
 
     <style>
         #div_firmas {
