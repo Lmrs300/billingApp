@@ -1,10 +1,14 @@
-let principal_fold = window.location.pathname.split("/")[1];
+let root_fold = window.location.pathname.split("/")[1];
 
 let protocol = window.location.protocol;
 
 let host = window.location.hostname;
 
-let lib_url = `${protocol}//${host}/${principal_fold}/Views/js/vendor/toast-main`;
+if (window.location.hostname == "localhost") {
+  var lib_url = `${protocol}//${host}/${root_fold}/Views/js/vendor/toast-main`;
+} else {
+  var lib_url = `${protocol}//${host}/Views/js/vendor/toast-main`;
+}
 
 function quitToast(newToast) {
   newToast.classList.add("active");
