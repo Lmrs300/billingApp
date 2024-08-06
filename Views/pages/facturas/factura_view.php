@@ -3,8 +3,9 @@ session_start();
 
 if (!isset($_SESSION['id'])) {
   //para que si la sesion no esta iniciado te saque al login.
-  header('location: ' . $princ_url . '/');
+  header('location: ../../../index.php');
 }
+
 require("../../../Controllers/factura_controller.php");
 $datos = new Factura_controller();
 $resultados = $datos->listar();

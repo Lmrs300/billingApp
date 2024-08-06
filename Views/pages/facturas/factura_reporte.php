@@ -3,11 +3,8 @@ ob_start();
 
 session_start();
 
-require("../server_var.php");
-
-
 if (!isset($_SESSION['id'])) {
-    header('location: ' . $princ_url . '/');
+    header('location: ../../../index.php');
 }
 
 require("../../../Controllers/factura_controller.php");

@@ -3,7 +3,7 @@ session_start();
 
 if (!isset($_SESSION['id'])) {
     //para que si la sesion no esta iniciado te saque al login.
-    header('location: ' . $princ_url . '/');
+    header('location: ../../../index.php');
 }
 
 require("../../../Controllers/producto_controller.php");

@@ -1,8 +1,3 @@
-<?php
-require("server_var.php");
-
-?>
-
 <link rel="stylesheet" type="text/css" id="link_general" href="../../css/general.css?v=<?php echo (rand()); ?>" />
 <link rel="stylesheet" type="text/css" href="../../css/navbar.css?v=<?php echo (rand()); ?>" />
 
