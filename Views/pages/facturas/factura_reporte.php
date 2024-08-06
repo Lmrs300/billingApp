@@ -7,25 +7,6 @@ if (!isset($_SESSION['id'])) {
     header('location: ../../../index.php');
 }
 
-// Obtener la carpeta principal
-$path_parts = explode('/', $_SERVER['REQUEST_URI']);
-$principal_fold = $path_parts[1];
-
-// Obtener el protocolo
-$protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
-
-// Obtener el host
-$host = $_SERVER['HTTP_HOST'];
-
-
-// URL principal 
-if ($host == "localhost") {
-    $princ_url = $protocol . $host . '/' . $principal_fold;
-} else {
-    $princ_url = $protocol . $host;
-}
-
-
 require("../../../Controllers/factura_controller.php");
 $datos = new Factura_controller();
 $factura = $datos->ver($_GET["id_fac"]);
@@ -52,18 +33,79 @@ $fecha[1] = substr($fecha[1], 0, -3)
     <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <title>Reporte de factura</title>
-    <link rel="stylesheet" href="<?php echo $princ_url; ?>/Views/css/reportes.css">
 
     <style>
-        #div_firmas {
-            position: fixed;
-            bottom: 0px;
-            left: 0px;
-            right: 0px;
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
         }
 
-        table {
-            margin-bottom: 200px;
+        @page {
+            margin: 10px;
+        }
+
+        body {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .contenedor {
+            padding: 10px;
+        }
+
+        header {
+            display: block;
+            top: 0;
+            text-align: center;
+        }
+
+        .texto {
+            display: inline-block;
+        }
+
+        .titulo {
+            width: 100%;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        section {
+            display: block;
+            width: 100%;
+            border-bottom: 2px dashed black;
+            margin: auto;
+            margin-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        section .div_cont {
+            width: 100%;
+            position: relative;
+        }
+
+        section .div_cont .izq {
+            display: inline;
+        }
+
+        section .div_cont .med {
+            display: inline;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        section .div_cont .der {
+            position: absolute;
+            right: 0;
+            display: inline;
+        }
+
+        li {
+            list-style: none;
         }
     </style>
 
