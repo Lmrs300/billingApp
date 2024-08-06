@@ -3,8 +3,11 @@ ob_start();
 
 session_start();
 
+require("../server_var.php");
+
+
 if (!isset($_SESSION['id'])) {
-    header('location: http://localhost/BillingApp/');
+    header('location: ' . $princ_url . '/');
 }
 
 require("../../../Controllers/factura_controller.php");

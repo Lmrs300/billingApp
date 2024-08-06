@@ -1,7 +1,12 @@
-<link rel="stylesheet" type="text/css" id="link_general" href="http://<?php echo $_SERVER['HTTP_HOST'] ?>/billingapp/Views/css/general.css?v=<?php echo (rand()); ?>" />
-<link rel="stylesheet" type="text/css" href="http://<?php echo $_SERVER['HTTP_HOST'] ?>/billingapp/Views/css/navbar.css?v=<?php echo (rand()); ?>" />
+<?php
+require("server_var.php");
 
-<script src="http://<?php echo $_SERVER['HTTP_HOST'] ?>/billingapp/Views/js/jquery-3.6.4.min.js"></script>
+?>
+
+<link rel="stylesheet" type="text/css" id="link_general" href="../../css/general.css?v=<?php echo (rand()); ?>" />
+<link rel="stylesheet" type="text/css" href="../../css/navbar.css?v=<?php echo (rand()); ?>" />
+
+<script src="../../js/jquery-3.6.4.min.js"></script>
 
 <nav>
 
@@ -22,7 +27,7 @@
 	<div class="right_side">
 		<img src="../../imgs/menu.png" class="menu_nav">
 
-		<a class="cerrar_sesion" href="../../../cerrar_sesion.php" title="Cerrar sesión"><img src="http://<?php echo $_SERVER['HTTP_HOST'] ?>/billingapp/Views/imgs/salida.png"></a>
+		<a class="cerrar_sesion" href="../../../cerrar_sesion.php" title="Cerrar sesión"><img src="../../imgs/salida.png"></a>
 	</div>
 
 </nav>

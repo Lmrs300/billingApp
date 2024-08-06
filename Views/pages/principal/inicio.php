@@ -3,7 +3,7 @@ session_start();
 
 if (!isset($_SESSION['id'])) {
     //para que si la sesion no esta iniciada te saque al login.
-    header('location: http://localhost/BillingApp/');
+    header('location: ' . $princ_url . '/');
 }
 
 ?>
